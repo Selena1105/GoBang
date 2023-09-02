@@ -9,15 +9,6 @@ GoBang is a gobang PC game, support:
 * game records inquiry
 * players win rate inquiry
 
-## Installation
-
-```
-import pygame
-import pandas as pd
-import numpy as np
-import random
-import datetime
-```
 
 ## Usage
 
