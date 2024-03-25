@@ -106,7 +106,7 @@ pygame.init()  # 游戏初始化
 pygame.mixer.init()  # 混音器模块初始化
 window = pygame.display.set_mode((1100, 700))  # 创建游戏窗口
 pygame.display.set_caption("GoBang")  # 设置窗口标题
-music = pygame.mixer.Sound("丹凤.mp3")
+music = pygame.mixer.Sound("./source/丹凤.mp3")
 
 #  初始化后续代码中的全局变量
 #  存储记录的数组
@@ -167,9 +167,9 @@ name_list = recordProcess(2, 1)
 score_list = recordProcess(2, 2)
 
 # 棋子
-black = pygame.image.load("黑.png")
+black = pygame.image.load("./source/黑.png")
 black = pygame.transform.scale(black, (40, 40))  # 黑子图片
-white = pygame.image.load("白.png")
+white = pygame.image.load("./source/白.png")
 white = pygame.transform.scale(white, (40, 40))  # 白子图片
 
 # 游戏过程需要的标志
@@ -201,9 +201,9 @@ def windowChange(order):
         global button_rank
         global button_re
         global button_rule
-        startBackground = pygame.image.load("开始界面.png")
+        startBackground = pygame.image.load("./source/开始界面.png")
         window.blit(startBackground, (0, 0))
-        voice = pygame.image.load("音效.png")
+        voice = pygame.image.load("./source/音效.png")
         voice = pygame.transform.scale(voice, (40, 40))
         window.blit(voice, (1020, 20))
         # 开始游戏按钮
@@ -226,7 +226,7 @@ def windowChange(order):
         global button_HeQi
         global button_back9
 
-        gameBackground = pygame.image.load("游戏背景.jpg")
+        gameBackground = pygame.image.load("./source/游戏背景.jpg")
         window.blit(gameBackground, (0, 0))
         # 画棋盘
         pygame.draw.rect(window, (238, 154, 73), (50, 50, 630, 630))  # (x1, y1, length, width)
@@ -254,7 +254,7 @@ def windowChange(order):
         global button_back4
         global button_auto
         global button_pair
-        gameBackground = pygame.image.load("登录背景.jpg")
+        gameBackground = pygame.image.load("./source/登录背景.jpg")
         gameBackground = pygame.transform.scale(gameBackground, (1100, 700))
         window.blit(gameBackground, (0, 0))
 
@@ -273,7 +273,7 @@ def windowChange(order):
         global inputbox_black
         global inputbox_white
 
-        gameBackground = pygame.image.load("双人登录.png")
+        gameBackground = pygame.image.load("./source/双人登录.png")
         gameBackground = pygame.transform.scale(gameBackground, (1100, 700))
         window.blit(gameBackground, (0, 0))
         text_black = textBox("执黑方昵称：", (0, 0, 0), 30, (130, 200))
@@ -295,7 +295,7 @@ def windowChange(order):
         global button_back6
         global button_black
         global button_white
-        gameBackground = pygame.image.load("人机登录.png")
+        gameBackground = pygame.image.load("./source/人机登录.png")
         gameBackground = pygame.transform.scale(gameBackground, (1100, 700))
         window.blit(gameBackground, (0, 0))
         button_black = Button(window, (255, 222, 173), (0, 0, 0), "执 黑", 240, 200, 250, 120, font4)
@@ -311,7 +311,7 @@ def windowChange(order):
         global button_back7
         global button_autob_confirm
         global inputbox_auto_black
-        gameBackground = pygame.image.load("人机黑.png")
+        gameBackground = pygame.image.load("./source/人机黑.png")
         gameBackground = pygame.transform.scale(gameBackground, (1100, 700))
         window.blit(gameBackground, (0, 0))
         button_back7 = Button(window, (255, 222, 173), (0, 0, 0), "返 回", 830, 600, 180, 75, font1)
@@ -328,7 +328,7 @@ def windowChange(order):
         global button_back8
         global button_autow_confirm
         global inputbox_auto_white
-        gameBackground = pygame.image.load("人机白.png")
+        gameBackground = pygame.image.load("./source/人机白.png")
         gameBackground = pygame.transform.scale(gameBackground, (1100, 700))
         window.blit(gameBackground, (0, 0))
         button_back8 = Button(window, (255, 222, 173), (0, 0, 0), "返 回", 830, 600, 180, 75, font1)
@@ -351,7 +351,7 @@ def windowChange(order):
     # 规则
     if order == 9:
         global button_back3
-        ruleBackground = pygame.image.load("游戏规则.png")
+        ruleBackground = pygame.image.load("./source/游戏规则.png")
         ruleBackground = pygame.transform.scale(ruleBackground, (1100, 700))
         window.blit(ruleBackground, (0, 0))
         button_back3 = Button(window, (255, 222, 173), (0, 0, 0), "返 回", 830, 610, 180, 75, font1)
@@ -830,7 +830,7 @@ def recordPage(page):
     global white_list
     global result_list
     global time_list
-    reBackground = pygame.image.load("历史战绩.png")
+    reBackground = pygame.image.load("./source/历史战绩.png")
     reBackground = pygame.transform.scale(reBackground, (1100, 700))
     window.blit(reBackground, (0, 0))
     button_back1 = Button(window, (255, 222, 173), (0, 0, 0), "返 回", 70, 50, 180, 75, font3)
@@ -904,7 +904,7 @@ def rankProcess(rankpage):
     global button_page5
     global namedict
 
-    reBackground = pygame.image.load("玩家排行榜.png")
+    reBackground = pygame.image.load("./source/玩家排行榜.png")
     reBackground = pygame.transform.scale(reBackground, (1100, 700))
     window.blit(reBackground, (0, 0))
     button_back2 = Button(window, (255, 222, 173), (0, 0, 0), "返 回", 70, 50, 180, 75, font3)
